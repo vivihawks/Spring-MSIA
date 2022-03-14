@@ -1,0 +1,45 @@
+1.	Spring Cloud – Day 1
+	a.	Monolith vs Microservice – Different Modules / Aspects / Swimlane diagram
+	b.	Cloud Intro and Deployment of MS
+	c.	High level Intro – MS Components
+	d.	MS Building Blocks – GCPICE
+	e.	Resiliency Patterns 
+	f.	CI/CD Patterns
+	g.	Basic Demo
+	h.	Cloud Configuration
+		i.	@EnableConfigServer
+		ii.	Need for cloud config
+		iii.	Cloud Config server demo
+		iv.	Hit profiles - /ls/default
+		v.	Client config
+		vi.	/actuator/env endpoint
+		vii./refresh endpoint
+2.	Spring Cloud – Day 2
+	a.	Service Discovery
+		i.	Load Balancers as Single points of failures. Horizontal and dynamic scaling 
+		ii.	Highly Avail, Fault Tolerant, Load Balanced, Peer to Peer, Resilient
+		iii.	@EnableEurekaserver annotation, waittimeinms uncomment otherwise need to wait for 5 mins for each app to be published
+		iv.	Registering service with Eureka
+	b.	Different Clients
+		i.	@EnableDiscoveryClient annotation and explore OrganizationDiscoveryClient
+		ii.	DiscoveryClient with RestTemplate - @LoadBalanced annotation in the Application class.  Servername in url = Application id . Refer OrganizationRestTempClient
+		iii.	FeignClient @EnableFeignClients Annotation, 	Refer OrganizationFeignClient Interface. Methods in the interface with @Requestmapping to convey target services to hit
+3.	Spring Cloud – Day 3
+	a.	Resiliency
+		i.	Resiliency Patterns  - ClientSide Load Balancing, Fallback, CircuitBreaker, Bulkhead
+		ii.	@EnableCircuitBreaker, @HystrixCommand annotations
+		iii.	CircuitBreaker – Fail Fast, Gracefully and recover Seamlessly. CommandProperty – Timeout
+		iv.	CircuitBreaker timing and failure window calculation
+		v.	Fallbackmethod
+		vi.	Bulkhead Pattern – threadpoolproperty of @HystrixCommand : coreSize, maxSize, 
+4.	Spring Cloud – Day 4
+	a.	Service Routing
+		1. Service Gateway - Reverse Proxy. Helps Dynamic Routing, Security and analytics
+		2. Zuul - URL Mapper and Interceptor. @Enablezuulproxy annotation. Don't use @EnableZuulServer. It is for custom service routing
+		3. Zuul > Ribbon > Eureka
+		4. url mapping techniques - Automated from Service Discovery, Manual from Service Discovery, Manual from static url
+		5. Explore the zuulservice.yml in the config server to see how the above mappings are done
+		6. zuul setting ignored services to reject mapping services from eureka. Can be all(*) or selective
+		7. zuul filters - Pre, Post and Route Filters 
+	b.	EDA??
+
