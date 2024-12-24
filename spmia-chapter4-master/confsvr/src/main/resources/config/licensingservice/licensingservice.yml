@@ -1,0 +1,25 @@
+example.property: "I AM IN THE DEFAULT"
+spring.jpa.database: "H2"
+spring.datasource.platform:  "org.hibernate.dialect.H2Dialect  "
+spring.jpa.show-sql: "true"
+spring.jpa.hibernate.ddl-auto: "none" #-- If you remove this, then database tables will be created, but not initialized
+#spring.datasource.initialization-mode: "always" -- Always initialized the database, disregarding whether embedded or not
+spring.datasource.driver-class-name : "org.h2.Driver"
+spring.datasource.url: "jdbc:h2:mem:testdb"
+spring.h2.console.enabled : "true"  
+spring.datasource.username : "sa"
+spring.datasource.password:
+spring.datasource.testWhileIdle: "true"
+spring.datasource.validationQuery: "SELECT 1"
+spring.jpa.properties.hibernate.dialect: "org.hibernate.dialect.H2Dialect"
+redis.server: "redis"
+redis.port: "6379"
+signing.key: "345345fsdfsf5345"
+
+#spring.jpa.database: "POSTGRESQL"
+#spring.datasource.platform:  "postgres"
+#spring.database.driverClassName: "org.postgresql.Driver"
+#spring.datasource.url: "jdbc:postgresql://database:5432/eagle_eye_local"
+#spring.datasource.username: "postgres"
+#spring.datasource.password: "{cipher}4788dfe1ccbe6485934aec2ffeddb06163ea3d616df5fd75be96aadd4df1da91"
+#spring.jpa.properties.hibernate.dialect: "org.hibernate.dialect.PostgreSQLDialect"

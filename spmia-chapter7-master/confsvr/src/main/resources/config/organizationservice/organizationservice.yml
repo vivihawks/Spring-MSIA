@@ -1,0 +1,15 @@
+example.organization.property: "I AM THE DEFAULT ORGANIZATION SERVICE"
+spring.jpa.database: "H2"
+spring.datasource.platform:  "org.hibernate.dialect.H2Dialect  "
+spring.jpa.show-sql: "true"
+spring.jpa.hibernate.ddl-auto: "none" #-- If you remove this, then database tables will be created, but not initialized
+#spring.datasource.initialization-mode: "always" -- Always initialized the database, disregarding whether embedded or not
+spring.datasource.driver-class-name : "org.h2.Driver"
+spring.datasource.url: "jdbc:h2:mem:testdb"
+spring.h2.console.enabled : "true"  
+spring.datasource.username: "sa"
+spring.datasource.password:
+spring.datasource.testWhileIdle: "true"
+spring.datasource.validationQuery: "SELECT 1"
+spring.jpa.properties.hibernate.dialect: "org.hibernate.dialect.H2Dialect"
+signing.key: "345345fsdfsf5345"
